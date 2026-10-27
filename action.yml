@@ -1,0 +1,55 @@
+name: 'ZeroGen v5 Final - Fullstack - 11 REAL + E2E'
+description: 'ZeroGen v5 Final Modern 2026 - Zero-Config Generation: 11 REAL skills + Fullstack Dashboard + E2E - GitHub Ready'
+author: 'ZeroGen'
+branding:
+  icon: 'zap'
+  color: 'white'
+inputs:
+  features:
+    description: 'all or comma list'
+    default: 'all'
+  fail-on-security:
+    default: 'true'
+  perf-budget-kb:
+    default: '500'
+  ai-review-enabled:
+    default: 'true'
+  sbom-enabled:
+    default: 'true'
+  e2e-enabled:
+    default: 'true'
+  auto-label:
+    default: 'true'
+  post-comment:
+    default: 'true'
+  github-token:
+    default: '${{ github.token }}'
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/setup-node@v4
+      with: { node-version: '22' }
+    - shell: bash
+      run: cd ${{ github.action_path }} && npm ci --silent || npm install --silent
+    - shell: bash
+      env:
+        INPUT_FEATURES: ${{ inputs.features }}
+        INPUT_FAIL-ON-SECURITY: ${{ inputs.fail-on-security }}
+        INPUT_PERF-BUDGET-KB: ${{ inputs.perf-budget-kb }}
+        INPUT_AI-REVIEW-ENABLED: ${{ inputs.ai-review-enabled }}
+        INPUT_SBOM-ENABLED: ${{ inputs.sbom-enabled }}
+        INPUT_E2E-ENABLED: ${{ inputs.e2e-enabled }}
+        INPUT_AUTO-LABEL: ${{ inputs.auto-label }}
+        INPUT_POST-COMMENT: ${{ inputs.post-comment }}
+        INPUT_GITHUB-TOKEN: ${{ inputs.github-token }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: node ${{ github.action_path }}/src/main.js
+    - if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: zerogen-v5-fullstack-${{ github.run_id }}
+        path: |
+          sbom.cyclonedx.json
+          COST_REPORT.md
+          playwright-report/
+        if-no-files-found: ignore
