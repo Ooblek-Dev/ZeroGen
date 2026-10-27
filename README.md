@@ -61,4 +61,4 @@ chmod +x deploy.sh
 ./deploy.sh Ooblek-Dev/ZeroGen
 ```
 
-MIT - ZeroGen v5 Final 2026
+MIT - ZeroGen 2026
