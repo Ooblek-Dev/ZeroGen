@@ -1,0 +1,1 @@
+import { test, expect } from '@playwright/test'; import fs from 'fs'; test('SBOM valid', async () => { if (!fs.existsSync('sbom.cyclonedx.json')) { test.skip(); return; } const sbom = JSON.parse(fs.readFileSync('sbom.cyclonedx.json','utf8')); expect(sbom.bomFormat).toBe('CycloneDX'); });

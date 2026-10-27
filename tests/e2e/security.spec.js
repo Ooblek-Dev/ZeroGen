@@ -1,0 +1,1 @@
+import { test, expect } from '@playwright/test'; import fs from 'fs'; test('no secrets', async () => { const yml = fs.readFileSync('action.yml','utf8'); expect(yml).not.toMatch(/AKIA[0-9A-Z]{16}/); });
