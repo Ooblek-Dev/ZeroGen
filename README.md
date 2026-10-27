@@ -1,4 +1,4 @@
-# ⚪ ZeroGen v5 Final — Zero-Config Generation
+# ⚪ ZeroGen — Zero-Config Generation
 
 > **Zero config — From zero to production in one action** • 
 
