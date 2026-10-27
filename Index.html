@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeroGen — Live Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+<div class="header">
+<div class="logo">0</div>
+<div class="h-title"><h1>ZeroGen</h1><p>Zero-config generation. From zero to production in one action.</p></div>
+<div class="h-badges">
+<span class="badge b-white"><span class="live-dot"></span> Live</span>
+<span class="badge b-black">11 Skills</span>
+<span class="badge b-dim">Fullstack</span>
+<span class="badge b-dim">GitHub Ready</span>
+<span class="badge b-dim mono" id="clock">00:00</span>
+</div>
+</div>
+<div class="hero">
+<div class="card"><div class="card-label"><span class="live-dot"></span> Build</div><div class="card-value">1.2s</div><div class="card-sub">Active • 90% • Node 22</div><div class="bars" id="b1"></div></div>
+<div class="card"><div class="card-label"><span class="live-dot"></span> Security</div><div class="card-value">14 files</div><div class="card-sub">0 critical • Verified</div><div class="bars" id="b2"></div></div>
+<div class="card"><div class="card-label"><span class="live-dot"></span> Components</div><div class="card-value">3 SBOM</div><div class="card-sub">CycloneDX 1.5 • valid</div><div class="bars" id="b3"></div></div>
+<div class="card"><div class="card-label"><span class="live-dot"></span> Uptime</div><div class="card-value" id="m4">99.9%</div><div class="card-sub">Ready • 2 passed</div><div class="bars" id="b4"></div></div>
+</div>
+<div class="section"><h2>11 Skills</h2><p>Tested, pure JS. <span class="mono">node tests/run-all.js</span></p></div>
+<div class="grid11">
+<div class="card skill"><div class="skill-top"><div class="skill-icon">📦</div><div class="skill-name">Stack</div><div class="skill-status s-pass">Active</div></div><div class="skill-desc">Node, Next.js, React, Express, Docker, TS</div></div>
+<div class="card skill"><div class="skill-top"><div class="skill-icon">🔐</div><div class="skill-name">Security</div><div class="skill-status s-pass">Verified</div></div><div class="skill-desc">91 files max AWS Key, Token</div></div>
+<div class="card skill"><div class="skill-top"><div class="skill-icon">⚡</div><div class="skill-name">Performance</div><div class="skill-status s-pass">Passed</div></div><div class="skill-desc">Bundle 500KB budget</div></div>
+<div class="card skill"><div class="skill-top"><div class="skill-icon">🧹</div><div class="skill-name">Deadcode</div><div class="skill-status s-ok">Live</div></div><div class="skill-desc">TODO, FIXME check</div></div>
+<div class="card skill"><div class="skill-top"><div class="skill-icon">📜</div><div class="skill-name">Supply Chain</div><div class="skill-status s-pass">Valid</div></div><div class="skill-desc">CycloneDX 1.5 valid</div></div>
+<div class="card skill"><div class="skill-top"><div class="skill-icon">🤖</div><div class="skill-name">Code Review</div><div class="skill-status s-pass">6 issues</div></div><div class="skill-desc">6 rules: N+1, SQLi, secret</div></div>
+<div class="card skill"><div class="skill-top"><div class="skill-icon">🎭</div><div class="skill-name">E2E</div><div class="skill-status s-pass">Ready</div></div><div class="skill-desc">3 specs health, SBOM, security</div></div>
+<div class="card skill"><div class="skill-top"><div class="skill-icon">📊</div><div class="skill-name">Dashboard</div><div class="skill-status s-pass">Live</div></div><div class="skill-desc">PR comment + Summary</div></div>
+</div>
+<div class="terminal" id="term"></div>
+<div class="footer">ZeroGen — Zero config, full power. 2026</div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
