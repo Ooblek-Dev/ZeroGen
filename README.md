@@ -1,11 +1,6 @@
 # ⚪ ZeroGen v5 Final — Zero-Config Generation
 
-> **Zero config, Full power — From zero to production in one action** • Modern 2026
-
-[[Version](https://img.shields.io/badge/version-v5.0.0-white?style=for-the-badge)](https://github.com/Ooblek-Dev/ZeroGen/releases/tag/v5)
-[[Tests](https://img.shields.io/badge/Tests-7%2F7%20PASSED-white?style=for-the-badge)](./tests/run-all.js)
-[[Skills](https://img.shields.io/badge/Skills-11%20REAL-black?style=for-the-badge)](./src/modules/)
-[[SBOM](https://img.shields.io/badge/SBOM-CycloneDX%201.5%20VALID-white?style=for-the-badge)](./sbom.cyclonedx.json)
+> **Zero config — From zero to production in one action** • 
 
 **ZeroGen** adalah GitHub Action full-stack composite yang men-generate 11 DevOps skill REAL (bukan mock) dalam 1 action.
 
